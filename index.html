@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Sailor Moon</title>
+</head>
+<body id="top">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="#top" class="logo">
+                <span class="logo-crescent">☾</span> Sailor Moon
+            </a>
+
+            <nav class="nav-menu" aria-label="Navegação principal">
+                <a href="#top">Início</a>
+                <a href="#personagens">Personagens</a>
+                <a href="#historia">História</a>
+                <a href="#temporadas">Temporadas</a>
+                <a href="#curiosidades">Curiosidades</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Pesquisar" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <button class="icon-btn" aria-label="Favoritos" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                </button>
+                <button class="icon-btn contact-trigger" aria-label="Fale conosco" type="button" onclick="cliqueiNoBotao()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" type="button">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#top">Início</a>
+            <a href="#personagens">Personagens</a>
+            <a href="#historia">História</a>
+            <a href="#temporadas">Temporadas</a>
+            <a href="#curiosidades">Curiosidades</a>
+            <button class="btn btn-secondary" onclick="cliqueiNoBotao()" type="button">Fale Conosco</button>
+        </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+        <div class="hero-video">
+            <video src="./video/video.mp4" autoplay muted loop playsinline></video>
+            <div class="hero-video-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text" data-animate="right">
+                <span class="tag-pill">
+                    <strong>Sailor Moon</strong>
+                    <em>Anime • Ação • Romance • Fantasia</em>
+                </span>
+
+                <h1>Guerreiras do <span class="accent-red">Amor</span> e da <span class="accent-gold">Justiça</span></h1>
+
+                <p class="hero-lead">Sob o disfarce de uma colegial desastrada, um destino cósmico espera para despertar.</p>
+
+                <p class="hero-desc">Sailor Moon narra a história das Sailors, guerreiras do amor e da justiça. Mas em especial a de Serena Tsukino (Usagi Tsukino em japonês), uma adolescente de 14 anos desastrada e boba, porém um tanto quanto normal. Ela mora com seus pais e irmão caçula, vai à escola e possui amores platônicos assim como qualquer jovem adolescente.</p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary" type="button" id="watchBtn">
+                        <span class="play-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </span>
+                        Assistir Agora
+                    </button>
+                    <button class="btn btn-secondary" type="button" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+                        Saiba Mais
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-figure" data-animate="scale">
+                <div class="figure-glow"></div>
+                <img src="./img/sailor.png" alt="Sailor Moon" class="hero-character">
+            </div>
+        </div>
+
+        <button class="scroll-cue" type="button" onclick="document.getElementById('personagens').scrollIntoView({behavior:'smooth'})" aria-label="Rolar para baixo">
+            <span></span>
+        </button>
+    </section>
+
+    <!-- ===================== PERSONAGENS ===================== -->
+    <section class="personagens-section" id="personagens">
+        <div class="section-heading" data-animate="up">
+            <span class="eyebrow">O esquadrão</span>
+            <h2>Personagens</h2>
+            <p>Cinco garotas comuns, cinco poderes ligados aos planetas, uma só missão: proteger a Terra em nome da Lua.</p>
+        </div>
+
+        <div class="character-grid">
+            <article class="char-card" data-scout="moon" data-animate="up">
+                <img src="./img/sailorrrr.jpg" alt="Sailors reunidas" class="char-group-img">
+                <h3>Sailor Moon</h3>
+                <p>Usagi Tsukino — desastrada no dia a dia, guardiã do Cristal de Prata sob a lua cheia.</p>
+                <button class="char-link" type="button">Ver detalhes <span>→</span></button>
+            </article>
+
+            <article class="char-card" data-scout="mercury" data-animate="up">
+                <img src="./img/mercury.jpg" alt="Sailors reunidas" class="char-group-img">
+                <h3>Sailor Mercúrio</h3>
+                <p>Ami Mizuno — a estrategista do grupo, comanda névoa e gelo com precisão cirúrgica.</p>
+                <button class="char-link" type="button">Ver detalhes <span>→</span></button>
+            </article>
+
+            <article class="char-card" data-scout="mars" data-animate="up">
+                <img src="./img/marte.png" alt="Sailors reunidas" class="char-group-img">
+                <h3>Sailor Marte</h3>
+                <p>Rei Hino — sacerdotisa e vidente, canaliza chamas espirituais contra as trevas.</p>
+                <button class="char-link" type="button">Ver detalhes <span>→</span></button>
+            </article>
+
+            <article class="char-card" data-scout="jupiter" data-animate="up">
+               <img src="./img/jupiter.png" alt="Sailors reunidas" class="char-group-img">
+                <h3>Sailor Júpiter</h3>
+                <p>Makoto Kino — força e trovão, coração gigante escondido atrás de punhos firmes.</p>
+                <button class="char-link" type="button">Ver detalhes <span>→</span></button>
+            </article>
+
+            <article class="char-card" data-scout="venus" data-animate="up">
+                <img src="./img/venus.jpg" alt="Sailors reunidas" class="char-group-img">
+                <h3>Sailor Vênus</h3>
+                <p>Minako Aino — líder nata, primeira guerreira revelada, mestra em amor e beleza.</p>
+                <button class="char-link" type="button">Ver detalhes <span>→</span></button>
+            </article>
+
+            <article class="char-card">
+  <img src="./img/juntasn.png" alt="Juntas" class="char-group-img">
+  <h3>Juntas, Imbatíveis</h3>
+  <p>Cinco poderes, um só juramento.</p>
+  <a href="#">Ver detalhes →</a>
+</article>
+        </div>
+    </section>
+
+    
+    <!-- ===================== EXPLORE O UNIVERSO ===================== -->
+     
+    <section class="universo-section" id="historia">
+        <div class="section-heading" data-animate="up">
+            <span class="eyebrow">Mergulhe fundo</span>
+            <h2>Explore o Universo Sailor Moon</h2>
+            <p>Da lendária era do Milênio de Prata às batalhas mais recentes contra o caos.</p>
+        </div>
+
+        <div class="universo-grid">
+            <article class="universo-card"  data-animate="up">
+                <span class="universo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </span>
+                <h3>História</h3>
+                <p>A jornada de Usagi, do encontro com Luna ao despertar da Princesa da Lua.</p>
+            </article>
+
+            <article class="universo-card" data-animate="up">
+                <span class="universo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+                </span>
+                <h3>Personagens</h3>
+                <p>Conheça cada guerreira, seus poderes e os laços que as unem.</p>
+            </article>
+
+            <article class="universo-card" data-animate="up">
+                <span class="universo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+                </span>
+                <h3>Transformações</h3>
+                <p>"Moon Prism Power": os rituais de transformação mais icônicos do anime.</p>
+            </article>
+
+            <article class="universo-card" data-animate="up">
+                <span class="universo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 4 2 7h10c0-3 2-4 2-7a7 7 0 0 0-7-7z"/><path d="M9 21h6"/></svg>
+                </span>
+                <h3>Vilões</h3>
+                <p>Do Reino das Trevas ao Caos: as ameaças que testaram as Sailors.</p>
+            </article>
+
+            <article class="universo-card" id="temporadas" data-animate="up">
+                <span class="universo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+                </span>
+                <h3>Temporadas</h3>
+                <p>Das cinco eras do anime clássico ao reboot Crystal.</p>
+            </article>
+
+            <article class="universo-card" id="curiosidades" data-animate="up">
+                <span class="universo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.7-2.5 2-2.5 4"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </span>
+                <h3>Curiosidades</h3>
+                <p>Bastidores, referências e segredos por trás da criação de Naoko Takeuchi.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#top" class="logo"><span class="logo-crescent">☾</span> Sailor Moon</a>
+            <p>Site de fã feito com carinho pelas guerreiras do amor e da justiça.</p>
+            <button class="btn btn-secondary" type="button" onclick="cliqueiNoBotao()">Fale Conosco</button>
+        </div>
+    </footer>
+
+    <!-- ===================== FORMULÁRIO (mantido) ===================== -->
+    <div class="mascara-form" onclick="sumirFormulario()"></div>
+
+    <div class="fale-conosco">
+        <h2>Fale Conosco</h2>
+        <form onsubmit="return false;">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva sua emergência mágica..." required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./animacoes.js"></script>
+</body>
+</html>
